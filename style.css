@@ -1,31 +1,65 @@
-body {
+* {
     margin: 0;
-    font-family: sans-serif;
-    background: #f2f2f2;
-    background-image: url('bg1.jfif');
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:floralwhite;
+}
+
+.search-container {
+    margin: 1em auto;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.9);;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.search-container input {
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 35px;
+    border-bottom: 2px solid #242727;
+    padding: 1em 0.4em;
+}
+
+.search-container button {
+    padding: 0.1em 0.2em;
+    margin: 0.5em 0.2em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button i:hover {
+    width: 30%;
 }
 
 #container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    margin: 2em;
 }
 
 .card {
+    overflow:hidden;
     background-color:white;
-    height: 480px;
-    width: 22%;
-    margin: 15px;
+    height: 80%;
+    width: 26%;
+    margin: 20px;
     box-sizing: border-box;
-    float: left;
-    text-align: center;
-    border-radius: 20px;
+    border-radius: 1.2em;
     cursor: pointer;
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(5, 5, 80, 0.842);
+    padding: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: .5s;
 }
 
@@ -36,43 +70,89 @@ body {
 
 .card-img {
     margin: auto;
-    width: 200px;
-    height: 220px;
+    width: 70%;
+    height: 42%;
     text-align: center;
     margin: 0 auto;
     display: block;
 }
 
-h3 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 16px;
-    margin: 5px;
-    padding-top: 30px;
+.reviews-price {
+    display: flex;
+    
+    align-items: center;
+    margin: .6em;
+} 
+
+
+.reviews-price .price {
+    margin: auto;
+    padding-left: 45%;
 }
 
-p {
-    font-size: 10px;
-    text-align: center;
-    color:gray;
-    padding: 5px;
+.reviews-price i {
+    color: yellow;
+    cursor: pointer; 
+    margin: .1em;
 }
 
-h5 {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
-    text-align: left;
-    color:rgb(34, 54, 73);
-    margin: 5px;
+
+.reviews-price .review, .description p {
+    font-size: .85em;
+    color:rgb(36, 36, 36);
 }
 
-@media(max-width:1000px){
+h4, .reviews-price .price{
+    font-size: 1.2em;
+}
+
+h4 {
+    overflow: hidden;
+    width: 100%;
+    height: 65px;
+}
+
+.description {
+    width: 100%;
+    height: 110px;
+    overflow:hidden;
+    padding: 0.3em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 1px;
+    margin-top: 5px;
+}
+
+.cart-button {
+    font-size: 14px;
+    height: 31px;
+    display: flex;
+    margin-left: 64%;
+    padding: .4em;
+    border-radius: .4em;
+    cursor: pointer;
+    background: rgb(10, 99, 99);
+}
+
+.cart-button i {
+    width: 18px;
+    height: 15px;
+    cursor: pointer;    
+}
+
+@media screen and (max-width:1000px){
     .card {
-        width: 45%;
+        width: 50%;
     }
+    
 }
-@media(max-width:850px){
+@media screen and (max-width:600px){
     .card {
-        width: 100%
+        width: 90%;
     }
+    
 }
