@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color:floralwhite;
 }
 
@@ -40,19 +41,22 @@ body {
 }
 
 #container {
+    font-family: "Poppins";
+    font-size: 16px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    place-items: center;
     margin: 2em;
 }
 
 .card {
     overflow:hidden;
     background-color:white;
-    height: 80%;
+    height: 82%;
     width: 26%;
     margin: 20px;
     box-sizing: border-box;
@@ -84,10 +88,9 @@ body {
     margin: .6em;
 } 
 
-
 .reviews-price .price {
     margin: auto;
-    padding-left: 45%;
+    padding-left: 55%;
 }
 
 .reviews-price i {
@@ -95,7 +98,6 @@ body {
     cursor: pointer; 
     margin: .1em;
 }
-
 
 .reviews-price .review, .description p {
     font-size: .85em;
@@ -114,7 +116,7 @@ h4 {
 
 .description {
     width: 100%;
-    height: 110px;
+    height: 105px;
     overflow:hidden;
     padding: 0.3em;
 }
@@ -122,37 +124,41 @@ h4 {
 .button-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
-    margin-bottom: 1px;
-    margin-top: 5px;
+    margin-top: 1.5em;
+}
+
+.heart-button, .cart-button i{
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2em;
+    background: #06c995;
 }
 
 .cart-button {
-    font-size: 14px;
-    height: 31px;
+    margin: 0 .2em;
+    font-size: 15px;
+    height: 42px; 
     display: flex;
-    margin-left: 64%;
-    padding: .4em;
-    border-radius: .4em;
+    align-items: center;
+    padding: .5em;
+    border-radius: .5em;
     cursor: pointer;
-    background: rgb(10, 99, 99);
+    background: #06d6a0;
 }
 
-.cart-button i {
-    width: 18px;
-    height: 15px;
-    cursor: pointer;    
+.cart-button i, .cart-button p, .heart-button {
+    padding: .35em .2em;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (min-width:500px){
     .card {
-        width: 50%;
-    }
-    
-}
-@media screen and (max-width:600px){
-    .card {
-        width: 90%;
+        width: 340px;
+        height: 500px;
+        margin: 20px 10px;
     }
     
 }

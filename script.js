@@ -13,6 +13,7 @@ const render = (prods, cards) => {
     const description = document.createElement('p');
     const div3 = document.createElement('div');
     const divHeart = document.createElement('div');
+    const heartIcon = document.createElement('i');
     const divCart = document.createElement('div');
     const cartIcon = document.createElement('i');
     const cartTxt = document.createElement('p');
@@ -27,6 +28,8 @@ const render = (prods, cards) => {
     rating.classList = 'review';
     div2.classList = 'description';
     div3.classList = 'button-container';
+    divHeart.classList = 'heart-button';
+    heartIcon.classList = 'fa fa-heart';
     divCart.classList = 'cart-button';
     cartIcon.classList = 'fa fa-shopping-cart ';
 
@@ -40,12 +43,15 @@ const render = (prods, cards) => {
     div1.appendChild(price);
     title.innerText = prod.title;
     description.innerText = prod.description;
-
     div2.appendChild(description);
-    cartTxt.innerText = 'add to cart';
-    divCart.appendChild(cartIcon);
+
+    divHeart.appendChild(heartIcon);
+    cartTxt.innerText = 'Add to cart';
     divCart.appendChild(cartTxt);
+    divCart.appendChild(cartIcon);
+    div3.appendChild(divHeart);
     div3.appendChild(divCart);
+
     div.appendChild(image);
     div.appendChild(div1);
     div.appendChild(title);
